@@ -25,15 +25,29 @@ Smart Emergency Assistance System built during Hackathon 2025 🚀
 
 ### Homepage
 
-![Homepage](screenshots/homepage.png)
+![Homepage](homepage.png)
 
-### Live Map
+### Emergency Screen
 
-![Map](screenshots/map.png)
+![Emergency](emergency.png)
 
-### AI Chatbot
+### Hospitals
 
-![Chatbot](screenshots/chatbot.png)
+![Hospitals](hospitals.png)
+
+### Services Map
+
+![Services Map](services-map.png)
+
+### AI Features
+
+![Features](features.png)
+
+### Chatbot
+
+![Chatbot](chatbot.png)
+
+
 
 ## 🚀 Future Scope
 
