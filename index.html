@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoadSOS AI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🚨 RoadSOS AI</h1>
+        <p class="tagline">
+            Smart Emergency Assistance System
+        </p>
+    </header>
+
+    <!-- Hero Images -->
+    <div class="hero-section">
+
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/2966/2966489.png"
+        class="hero-img">
+
+        <img
+        src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
+        class="hero-img">
+
+    </div>
+
+    <p class="warning">
+        ⚠️ Every year thousands of accidents happen —
+        fast response saves lives.
+    </p>
+
+    <!-- Buttons -->
+    <div class="button-group">
+
+        <button
+        class="emergency"
+        onclick="getLocation()">
+
+        🚨 EMERGENCY HELP
+
+        </button>
+
+        <button onclick="simulateAccident()">
+
+        ⚠️ Simulate Accident
+
+        </button>
+
+    </div>
+
+    <!-- Status -->
+    <p id="statusText">🟢 System Ready</p>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Emergency Results -->
+    <div id="emergencyResults" style="display:none;">
+
+        <h2>🚨 Nearby Emergency Services</h2>
+
+        <iframe id="liveMap"></iframe>
+
+        <div id="placesList"></div>
+
+    </div>
+
+    <!-- Emergency Action Buttons -->
+    <div class="actions">
+
+        <button
+        onclick="callAmbulance()"
+        class="call">
+
+        🚑 Call Ambulance
+
+        </button>
+
+        <button onclick="sendAlert()">
+
+        📩 Alert Family
+
+        </button>
+
+        <button onclick="toggleMode()">
+
+        🌙 Toggle Mode
+
+        </button>
+
+    </div>
+
+    <!-- Emergency Numbers -->
+    <div class="emergency-numbers">
+
+        <h3>📞 Emergency Numbers</h3>
+
+        <p>🚑 Ambulance: 108</p>
+        <p>👮 Police: 100</p>
+        <p>🔥 Fire Brigade: 101</p>
+
+    </div>
+
+    <!-- AI Features -->
+    <div class="features">
+
+        <h3>🤖 AI Features</h3>
+
+        <ul>
+            <li>📍 GPS Live Tracking</li>
+            <li>🎤 Voice Assistant</li>
+            <li>🚑 Smart Emergency Routing</li>
+            <li>🌐 Offline Support Ready</li>
+            <li>📩 Instant Family Alerts</li>
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Built for Road Safety Hackathon 🚀
+        </p>
+    </footer>
+
+</div>
+
+<!-- Chat Icon -->
+<div class="chat-icon" onclick="toggleChat()">
+💬
+</div>
+
+<!-- Chat Window -->
+<div class="chat-window" id="chatWindow">
+
+    <h3>🤖 RoadSOS AI Assistant</h3>
+
+    <input
+    type="text"
+    id="userInput"
+    placeholder="Type or speak..."
+    onkeydown="handleEnter(event)">
+
+    <button onclick="chatbot()">
+    Send
+    </button>
+
+    <button onclick="startVoice()">
+    🎤
+    </button>
+
+    <p id="botResponse"></p>
+
+</div>
+
+<!-- Siren -->
+<audio
+id="siren"
+src="https://www.soundjay.com/misc/sounds/siren.wav">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
