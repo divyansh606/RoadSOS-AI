@@ -1,173 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RoadSOS AI</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070b14">
+    <meta name="description" content="RoadSOS AI — Smart road emergency assistance and location-based safety support.">
+    <title>RoadSOS AI | Every Second Matters</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 <div class="container">
 
-    <header>
-        <h1>🚨 RoadSOS AI</h1>
-        <p class="tagline">
-            Smart Emergency Assistance System
-        </p>
-    </header>
+    <nav class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">✦</span>
+            <span>RoadSOS<span class="brand-accent"> AI</span></span>
+        </a>
 
-    <!-- Hero Images -->
-    <div class="hero-section">
+        <div class="nav-status">
+            <span class="live-dot"></span>
+            Emergency Support Interface
+        </div>
 
-        <img
-        src="https://cdn-icons-png.flaticon.com/512/2966/2966489.png"
-        class="hero-img">
+        <a href="#emergency" class="nav-link">Get Help ↗</a>
+    </nav>
 
-        <img
-        src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png"
-        class="hero-img">
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    SMART ROAD SAFETY PLATFORM
+                </div>
 
-    </div>
+                <h1>
+                    Every second<br>
+                    <span class="gradient-text">can save a life.</span>
+                </h1>
 
-    <p class="warning">
-        ⚠️ Every year thousands of accidents happen —
-        fast response saves lives.
-    </p>
+                <p class="hero-description">
+                    When every second matters, RoadSOS AI helps you access
+                    emergency assistance, find nearby services and prepare
+                    to share your location.
+                </p>
 
-    <!-- Buttons -->
-    <div class="button-group">
+                <div class="hero-actions" id="emergency">
+                    <button class="emergency primary-cta" id="emergencySosButton" onclick="activateEmergencySOS()">
+                        <span>🚨</span> EMERGENCY HELP
+                        <span class="cta-arrow">↗</span>
+                    </button>
 
-        <button
-        class="emergency"
-        onclick="getLocation()">
+                    <button class="secondary-cta" onclick="simulateAccident()">
+                        ▶ &nbsp; Test Emergency Demo
+                    </button>
+                </div>
 
-        🚨 EMERGENCY HELP
+                <div class="trust-line">
+                    <span class="trust-check">✓</span>
+                    Quick access to emergency tools
+                    <span class="trust-divider">•</span>
+                    Location permission required
+                </div>
+            </div>
 
-        </button>
+            <div class="hero-visual">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
 
-        <button onclick="simulateAccident()">
+                <div class="visual-glow"></div>
 
-        ⚠️ Simulate Accident
+                <div class="visual-card">
+                    <div class="visual-card-top">
+                        <span class="mini-label">ROADSOS / RESPONSE</span>
+                        <span class="visual-live"><span class="live-dot"></span> READY</span>
+                    </div>
 
-        </button>
+                    <div class="rescue-illustration">
+                        <div class="rescue-ring ring-a"></div>
+                        <div class="rescue-ring ring-b"></div>
+                        <div class="rescue-cross">✚</div>
+                        <div class="rescue-icon">🚑</div>
+                    </div>
 
-    </div>
+                    <h3>Help is one step closer.</h3>
+                    <p>Emergency tools, in one place.</p>
 
-    <!-- Status -->
-    <p id="statusText">🟢 System Ready</p>
+                    <div class="visual-metrics">
+                        <div>
+                            <span class="metric-icon">📍</span>
+                            <span class="metric-title">LOCATION</span>
+                            <strong>Permission-based</strong>
+                        </div>
+                        <div>
+                            <span class="metric-icon">🛡️</span>
+                            <span class="metric-title">SAFETY</span>
+                            <strong>Tools available</strong>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Loader -->
-    <div id="loader" class="loader hidden"></div>
+                <div class="floating-badge badge-top">
+                    <span class="badge-symbol">✦</span>
+                    <div><strong>RoadSOS AI</strong><small>Smart assistance</small></div>
+                </div>
 
-    <!-- Emergency Results -->
-    <div id="emergencyResults" style="display:none;">
+                <div class="floating-badge badge-bottom">
+                    <span class="badge-pulse"></span>
+                    <div><strong>System ready</strong><small>Awaiting your action</small></div>
+                </div>
+            </div>
+        </section>
 
-        <h2>🚨 Nearby Emergency Services</h2>
+        <section class="alert-banner">
+            <div class="alert-symbol">!</div>
+            <div>
+                <strong>In an emergency, act quickly.</strong>
+                <p>Use the tools below to access emergency services. In a real emergency, contact the appropriate service directly.</p>
+            </div>
+            <span class="alert-arrow">↗</span>
+        </section>
 
-        <iframe id="liveMap"></iframe>
+        <section class="section-block">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">YOUR SAFETY TOOLKIT</span>
+                    <h2>Emergency <span class="gradient-text">command center.</span></h2>
+                    <p>Important actions, right when you need them.</p>
+                </div>
+                <span class="section-index">01 / RESPONSE</span>
+            </div>
 
-        <div id="placesList"></div>
+            <div class="status-strip">
+                <div class="status-item">
+                    <span class="status-icon">◉</span>
+                    <div><small>PLATFORM</small><strong id="statusText">🟢 System Ready</strong></div>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">⌖</span>
+                    <div><small>GPS LOCATION</small><strong>Available on permission</strong></div>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">✚</span>
+                    <div><small>EMERGENCY TOOLS</small><strong>Ready to access</strong></div>
+                </div>
+            </div>
 
-    </div>
+            <div id="loader" class="loader hidden"></div>
 
-    <!-- Emergency Action Buttons -->
-    <div class="actions">
+            <div id="emergencyResults" class="emergency-results" style="display:none;">
+                <div class="result-heading">
+                    <div>
+                        <span class="section-kicker">LOCATION SERVICES</span>
+                        <h3>Nearby emergency services</h3>
+                    </div>
+                    <span class="result-tag">LOCATION SEARCH</span>
+                </div>
 
-        <button
-        onclick="callAmbulance()"
-        class="call">
+                <iframe
+                    id="liveMap"
+                    title="Map showing nearby emergency services"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
 
-        🚑 Call Ambulance
+                <div id="placesList"></div>
+            </div>
 
-        </button>
+            <div class="action-grid">
+                <button class="action-card ambulance-card" onclick="callAmbulance()">
+                    <span class="action-icon">🚑</span>
+                    <span class="action-copy">
+                        <strong>Call Ambulance</strong>
+                        <small>Contact ambulance service</small>
+                    </span>
+                    <span class="action-arrow">↗</span>
+                </button>
 
-        <button onclick="sendAlert()">
+                <button class="action-card family-card" onclick="sendAlert()">
+                    <span class="action-icon">📩</span>
+                    <span class="action-copy">
+                        <strong>Alert Family</strong>
+                        <small>Prepare a family alert</small>
+                    </span>
+                    <span class="action-arrow">↗</span>
+                </button>
 
-        📩 Alert Family
+                <button class="action-card demo-card" onclick="toggleMode()">
+                    <span class="action-icon">◐</span>
+                    <span class="action-copy">
+                        <strong>Switch Appearance</strong>
+                        <small>Toggle light or dark mode</small>
+                    </span>
+                    <span class="action-arrow">↗</span>
+                </button>
+            </div>
+        </section>
 
-        </button>
 
-        <button onclick="toggleMode()">
+        <section class="section-block advanced-tools" id="smart-tools">
+            <div class="section-heading"><div><span class="section-kicker">ADVANCED SAFETY TOOLS</span><h2>More ways to <span class="gradient-text">stay prepared.</span></h2><p>Helpful tools you can use without pretending that an emergency service has been dispatched.</p></div><span class="section-index">02 / PREPARE</span></div>
+            <div class="tool-grid">
+                <article class="tool-panel sos-panel"><div class="tool-icon">🆘</div><h3>Share my location</h3><p>Get your current coordinates and create a map link you can share with a trusted contact.</p><button class="tool-button" onclick="shareMyLocation()">Get & share location ↗</button><p id="shareLocationStatus" class="tool-result" aria-live="polite"></p></article>
+                <article class="tool-panel"><div class="tool-icon">🩺</div><h3>First-aid quick guide</h3><p>Choose a situation for immediate, general safety guidance.</p><label for="firstAidType">Situation</label><select id="firstAidType"><option value="general">General accident scene</option><option value="bleeding">Severe bleeding</option><option value="burn">Burn</option><option value="unresponsive">Unresponsive person</option></select><button class="tool-button" onclick="showFirstAid()">Show guidance</button><p id="firstAidResult" class="tool-result" aria-live="polite">Select a situation and tap Show guidance.</p></article>
+                <article class="tool-panel"><div class="tool-icon">🚗</div><h3>Roadside breakdown</h3><p>Quick safety steps for a vehicle breakdown.</p><ul class="compact-list"><li>Move away from traffic if safe.</li><li>Turn on hazard lights and use a warning triangle only when safe and legal.</li><li>Do not stand behind or underneath a vehicle near traffic.</li></ul><a class="tool-button link-button" href="https://www.google.com/maps/search/roadside+assistance+near+me" target="_blank" rel="noopener noreferrer">Find roadside help ↗</a></article>
+                <article class="tool-panel"><div class="tool-icon">🌦️</div><h3>Local weather safety</h3><p>Use your location to check current conditions and receive a basic driving reminder.</p><button class="tool-button" onclick="getWeatherSafety()">Check local weather</button><p id="weatherResult" class="tool-result" aria-live="polite"></p></article>
+                <article class="tool-panel"><div class="tool-icon">📋</div><h3>Incident report</h3><p>Create a local report you can download. Avoid entering sensitive personal details.</p><label for="incidentType">Incident type</label><select id="incidentType"><option>Road accident</option><option>Vehicle breakdown</option><option>Road hazard</option><option>Near miss</option></select><label for="incidentDetails">Notes (optional)</label><textarea id="incidentDetails" rows="3" maxlength="1000" placeholder="Briefly describe what happened..."></textarea><button class="tool-button" onclick="downloadIncidentReport()">Download report ↗</button></article>
+                <article class="tool-panel"><div class="tool-icon">📊</div><h3>Safety activity</h3><p>This device keeps a small local count of the tools you use. No account is required.</p><div class="activity-stats"><div><strong id="activityCount">0</strong><small>tool actions</small></div><div><strong id="reportCount">0</strong><small>reports created</small></div></div><button class="tool-button subtle-button" onclick="resetSafetyStats()">Reset local stats</button></article>
+            </div>
+            <p class="safety-disclaimer">RoadSOS AI is an assistance prototype, not an emergency dispatch service or medical professional. In immediate danger in India, call 112. For ambulance assistance, you can also try 108. Follow the emergency operator's instructions.</p>
+        </section>
 
-        🌙 Toggle Mode
+        <section class="section-block information-grid">
+            <div class="info-panel emergency-numbers">
+                <div class="panel-heading">
+                    <span class="panel-icon">☎</span>
+                    <div>
+                        <span class="section-kicker">IMPORTANT CONTACTS</span>
+                        <h3>Emergency numbers</h3>
+                    </div>
+                </div>
 
-        </button>
+                <div class="number-row">
+                    <span class="number-emoji">🚑</span>
+                    <span class="number-label">Ambulance</span>
+                    <strong>108</strong>
+                </div>
 
-    </div>
+                <div class="number-row">
+                    <span class="number-emoji">👮</span>
+                    <span class="number-label">Police</span>
+                    <strong>112</strong>
+                </div>
 
-    <!-- Emergency Numbers -->
-    <div class="emergency-numbers">
+                <div class="number-row">
+                    <span class="number-emoji">🔥</span>
+                    <span class="number-label">Fire Brigade</span>
+                    <strong>101</strong>
+                </div>
 
-        <h3>📞 Emergency Numbers</h3>
+                <p class="panel-note">For pan-India emergency assistance, you can also try 112.</p>
+            </div>
 
-        <p>🚑 Ambulance: 108</p>
-        <p>👮 Police: 100</p>
-        <p>🔥 Fire Brigade: 101</p>
+            <div class="info-panel features">
+                <div class="panel-heading">
+                    <span class="panel-icon">✦</span>
+                    <div>
+                        <span class="section-kicker">BUILT FOR ROAD SAFETY</span>
+                        <h3>Platform capabilities</h3>
+                    </div>
+                </div>
 
-    </div>
+                <ul class="feature-list">
+                    <li><span>⌖</span><div><strong>Location assistance</strong><small>Request location access to find services.</small></div></li>
+                    <li><span>🎙</span><div><strong>Voice interaction</strong><small>Use the available voice assistant.</small></div></li>
+                    <li><span>🚑</span><div><strong>Emergency access</strong><small>Quick access to emergency calling tools.</small></div></li>
+                    <li><span>💬</span><div><strong>RoadSOS assistant</strong><small>Interact with the built-in assistant.</small></div></li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- AI Features -->
-    <div class="features">
+        <section class="closing-banner">
+            <div class="closing-icon">✦</div>
+            <div>
+                <span class="section-kicker">ROAD SAFETY STARTS WITH US</span>
+                <h2>Be prepared. Stay aware. Help save lives.</h2>
+            </div>
+            <button onclick="getLocation()" class="closing-button">Open Emergency Tools ↗</button>
+        </section>
+    </main>
 
-        <h3>🤖 AI Features</h3>
-
-        <ul>
-            <li>📍 GPS Live Tracking</li>
-            <li>🎤 Voice Assistant</li>
-            <li>🚑 Smart Emergency Routing</li>
-            <li>🌐 Offline Support Ready</li>
-            <li>📩 Instant Family Alerts</li>
-        </ul>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>
-            Built for Road Safety Hackathon 🚀
-        </p>
+    <footer class="site-footer">
+        <a href="#" class="brand footer-brand">
+            <span class="brand-icon">✦</span>
+            <span>RoadSOS<span class="brand-accent"> AI</span></span>
+        </a>
+        <p>Built for Road Safety Hackathon.</p>
+        <span class="footer-caption">TECHNOLOGY WITH A PURPOSE.</span>
     </footer>
-
 </div>
 
-<!-- Chat Icon -->
-<div class="chat-icon" onclick="toggleChat()">
-💬
+<!-- Floating assistant -->
+<div class="chat-icon" onclick="toggleChat()" title="Open RoadSOS AI Assistant" aria-label="Open RoadSOS AI Assistant">
+    💬
 </div>
 
-<!-- Chat Window -->
 <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <span class="chat-avatar">✦</span>
+        <div><h3>RoadSOS AI Assistant</h3><p><span class="live-dot"></span> Assistant interface</p></div>
+        <button class="chat-close" onclick="toggleChat()" aria-label="Close assistant">×</button>
+    </div>
 
-    <h3>🤖 RoadSOS AI Assistant</h3>
-
-    <input
-    type="text"
-    id="userInput"
-    placeholder="Type or speak..."
-    onkeydown="handleEnter(event)">
-
-    <button onclick="chatbot()">
-    Send
-    </button>
-
-    <button onclick="startVoice()">
-    🎤
-    </button>
-
-    <p id="botResponse"></p>
-
+    <div class="chat-body">
+        <p class="chat-intro">Hello! I can help you navigate the RoadSOS tools. What do you need?</p>
+        <input type="text" id="userInput" placeholder="Type or speak..." onkeydown="handleEnter(event)" aria-label="Message to RoadSOS assistant">
+        <div class="chat-actions">
+            <button onclick="chatbot()">Send ↗</button>
+            <button onclick="startVoice()" aria-label="Start voice assistant">🎤</button>
+        </div>
+        <p id="botResponse" aria-live="polite"></p>
+    </div>
 </div>
 
-<!-- Siren -->
-<audio
-id="siren"
-src="https://www.soundjay.com/misc/sounds/siren.wav">
-</audio>
+<audio id="siren" src="https://www.soundjay.com/misc/sounds/siren.wav" preload="none"></audio>
 
 <script src="script.js"></script>
-
 </body>
 </html>
