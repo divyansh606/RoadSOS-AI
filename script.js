@@ -378,7 +378,7 @@ async function chatbot() {
     responseElement.innerText = "RoadSOS AI is thinking...";
 
     try {
-        const result = await fetch("http://localhost:3000/api/chat", {
+        const result = await fetch("https://roadsos-ai-jt2l.onrender.com/api/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
