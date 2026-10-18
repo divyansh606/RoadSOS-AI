@@ -42,22 +42,3 @@ This is a support prototype, not an emergency dispatch service or a medical prof
 ![RoadSOS Services Map](screenshots/services-map.png)
 
 
-## Screenshots
-
-### Homepage
-![RoadSOS AI Homepage](screenshots/homepage.png)
-
-### Emergency Alert
-![Emergency Alert](screenshots/emergency.png)
-
-### Nearby Hospitals
-![Nearby Hospitals](screenshots/hospitals.png)
-
-### AI Chatbot
-![RoadSOS AI Chatbot](screenshots/chatbot.png)
-
-### Safety Features
-![Road Safety Features](screenshots/feature.png)
-
-### Services Map
-![RoadSOS Services Map](screenshots/services-map.png)
