@@ -1,0 +1,22 @@
+RoadSOS AI - Upgrade Notes
+
+Added to the existing standalone HTML/CSS/JavaScript website:
+- Share my location: requests browser geolocation and creates a Google Maps link; uses native share when available or clipboard on secure contexts.
+- First-aid quick guide: basic safety guidance for general accident scenes, severe bleeding, burns, and an unresponsive person. This is not a substitute for emergency services or professional training.
+- Roadside breakdown guidance and link to search for local roadside assistance.
+- Local weather safety: uses browser geolocation and the public Open-Meteo forecast API; requires internet access.
+- Incident report download: saves a local JSON file; it does not submit the report to any authority.
+- Local activity counters stored in browser localStorage.
+- Preserved the original emergency, map, chatbot, voice, mode, and cursor-glow code in the main project files.
+
+Important limitations:
+- The chatbot remains rule-based. No generative AI API or backend was added, because that requires choosing and configuring an AI provider and secure server-side credentials.
+- No automatic accident detection, ambulance dispatch, or automatic family notification is implemented.
+- Hospital search and weather rely on public internet services and may be unavailable temporarily.
+- Geolocation works on localhost and secure HTTPS contexts in supported browsers; opening the file directly may restrict some features.
+
+How to test:
+1. Extract this ZIP.
+2. Open RoadSOS/index.html through a local server or your existing VS Code Live Server.
+3. Test Emergency Help, location sharing, first-aid guide, weather, incident report download, chatbot, and voice features.
+4. Keep your original folder/backup until you finish testing.

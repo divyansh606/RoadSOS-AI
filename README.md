@@ -1,67 +1,63 @@
-# 🚨 RoadSOS AI
+# RoadSOS AI — Road safety support prototype
 
-Smart Emergency Assistance System built during Hackathon 2025 🚀
+Team: The Rockerz  
+Team leader: Divyansh Srivastava  
+College: Hi-Tech Institute of Engineering & Technology, Ghaziabad
 
-## 🔥 Features
+## Run the website
+Open `index.html` through VS Code Live Server or another local HTTP server. GPS features may not work when opened directly as a file.
 
-* 📍 Live GPS Tracking
-* 🏥 Nearby Hospital Detection
-* 🎤 AI Voice Assistant
-* 📩 Emergency Alerts
-* 🗺️ Real-Time Maps
-* 🚑 Emergency SOS
-* 🌙 Dark Mode UI
+## Features
+- Browser-based location and map display
+- Nearby hospital search via OpenStreetMap
+- Emergency call links and a user-confirmed WhatsApp alert flow
+- First-aid quick guide and roadside breakdown tips
+- Location sharing and local weather safety
+- Downloadable local incident report
+- Local-only activity dashboard
+- Voice assistant and basic chatbot, with optional secure AI backend in `server/`
 
-## ⚙️ Tech Stack
+## Important
+This is a support prototype, not an emergency dispatch service or a medical professional. In an immediate emergency in India, call **112** and follow the operator's instructions. The site does not automatically call an ambulance or notify family.
 
-* HTML
-* CSS
-* JavaScript
-* OpenStreetMap API
-* Geolocation API
-* Speech Recognition API
 
-## 📸 Screenshots
+## Screenshots
 
 ### Homepage
+![RoadSOS AI Homepage](screenshots/homepage.png)
 
-![Homepage](homepage.png)
+### Emergency Alert
+![Emergency Alert](screenshots/emergency.png)
 
-### Emergency Screen
+### Nearby Hospitals
+![Nearby Hospitals](screenshots/hospitals.png)
 
-![Emergency](emergency.png)
+### AI Chatbot
+![RoadSOS AI Chatbot](screenshots/chatbot.png)
 
-### Hospitals
-
-![Hospitals](hospitals.png)
+### Safety Features
+![Road Safety Features](screenshots/feature.png)
 
 ### Services Map
-
-![Services Map](services-map.png)
-
-### AI Features
-
-![Features](features.png)
-
-### Chatbot
-
-![Chatbot](chatbot.png)
+![RoadSOS Services Map](screenshots/services-map.png)
 
 
+## Screenshots
 
-## 🚀 Future Scope
+### Homepage
+![RoadSOS AI Homepage](screenshots/homepage.png)
 
-* AI Accident Detection
-* Live Ambulance Tracking
-* Offline Emergency Support
-* Multi-language AI
+### Emergency Alert
+![Emergency Alert](screenshots/emergency.png)
 
-## 👨‍💻 Team
+### Nearby Hospitals
+![Nearby Hospitals](screenshots/hospitals.png)
 
-The Rockerz
-Divyansh Srivastava
+### AI Chatbot
+![RoadSOS AI Chatbot](screenshots/chatbot.png)
 
-## 📌 Built During
+### Safety Features
+![Road Safety Features](screenshots/feature.png)
 
-Hackathon 2025
-
+### Services Map
+![RoadSOS Services Map](screenshots/services-map.png)
