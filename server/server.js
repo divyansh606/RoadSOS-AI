@@ -8,7 +8,11 @@ const app = express();
 const port = Number(process.env.PORT || 3000);
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'http://localhost:5500']
+    origin: [
+        'http://127.0.0.1:5500',
+        'http://localhost:5500',
+        'https://divyansh606.github.io'
+    ]
 }));
 app.use(express.json({ limit: '8kb' }));
 app.use('/api/', rateLimit({ windowMs: 60_000, limit: 30, standardHeaders: 'draft-7', legacyHeaders: false }));
